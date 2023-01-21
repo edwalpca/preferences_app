@@ -1,10 +1,12 @@
-# tsw_preferences_app
+# Preferencias de Usuario en el App.
 
-A new Flutter project.
+Este proyecto es de repaso del curso de Flutter para el manejo y gestor de preferencias de usuario para almacenar en el Movil bajo la estructura llave-valor, y con el objetivo de que cierta configuracion que el usuario realiza no pierda los datos y/o valores, tambien puede almacenarse informacion general del usuario.
 
-## Getting Started
+## Descripción
 
-This project is a starting point for a Flutter application.
+Manejo de Preferencias de usuario.
+Estructura de Llave - Valor, el almacenamiento se realiza en el disco duro del dispositivo o equivalente.
+Reconocimiento de que el App se puede cerrar y los valores resguardados en las preferencias de usuario no se pierden como un tipo de manejo persistente.
 
 A few resources to get you started if this is your first Flutter project:
 
