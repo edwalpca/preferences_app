@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tsw_preferences_app/share_preferences/preferences.dart';
 import 'package:tsw_preferences_app/widgets/widgets_export.dart';
 
 class SettingScreen extends StatefulWidget {
@@ -14,9 +15,9 @@ class SettingScreen extends StatefulWidget {
 
 class _SettingScreenState extends State<SettingScreen> {
   //Variables del Formulario.
-  bool isDarkMode = false;
-  int gender = 1; //Masculino;
-  String name = 'Mauricio Alpizar Castro';
+  // bool isDarkMode = false;
+  // int gender = 1; //Masculino;
+  // String name = 'Mauricio Alpizar Castro';
 
   @override
   Widget build(BuildContext context) {
@@ -40,9 +41,9 @@ class _SettingScreenState extends State<SettingScreen> {
             //operativo que se esta utilizando.-
             SwitchListTile(
                 title: const Text('DarkMode'),
-                value: isDarkMode,
+                value: Preferences.isDarkMode,
                 onChanged: (value) {
-                  isDarkMode = value;
+                  Preferences.isDarkMode = value;
                   //Mando a llamar al setState para redibujar el Widget.
                   setState(() {});
                 }),
@@ -51,20 +52,20 @@ class _SettingScreenState extends State<SettingScreen> {
             RadioListTile<int>(
                 title: const Text('Masculino'),
                 value: 1,
-                groupValue: gender,
+                groupValue: Preferences.gender,
                 onChanged: (value) {
                   //Aqui pregunto si el value es nulo que le mande un 1
-                  gender = value ?? 1;
+                  Preferences.gender = value ?? 1;
                   setState(() {});
                 }),
             const Divider(),
             RadioListTile<int>(
                 title: const Text('Femenino'),
                 value: 2,
-                groupValue: gender,
+                groupValue: Preferences.gender,
                 onChanged: (value) {
                   //Aqui pregunto si el value es nulo que le mande un 2
-                  gender = value ?? 2;
+                  Preferences.gender = value ?? 2;
                   setState(() {});
                 }),
             const Divider(),
@@ -72,12 +73,12 @@ class _SettingScreenState extends State<SettingScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
-                initialValue: 'Mauricio Alpizar',
+                initialValue: Preferences.name,
                 decoration: InputDecoration(
-                    labelText: 'Nombre', 
-                    helperText: 'Nombre del Usuario:$name'),
+                    labelText: 'Nombre',
+                    helperText: 'Nombre del Usuario:${ Preferences.name }'),
                 onChanged: (value) {
-                  name = value;
+                  Preferences.name = value;
                   setState(() {});
                 },
               ),
