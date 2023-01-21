@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:tsw_preferences_app/widgets/widgets_export.dart';
 
-class SettingScreen extends StatelessWidget {
+class SettingScreen extends StatefulWidget {
   // Utilizado para el Manejo de Pantalla con nombres estaticos
   // dentro del App
   static const String routerName = 'Settings';
 
   const SettingScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SettingScreen> createState() => _SettingScreenState();
+}
+
+class _SettingScreenState extends State<SettingScreen> {
+  //Variables del Formulario.
+  bool isDarkMode = false;
+  int gender = 1; //Masculino;
+  String name = 'Mauricio Alpizar Castro';
 
   @override
   Widget build(BuildContext context) {
@@ -29,31 +39,47 @@ class SettingScreen extends StatelessWidget {
             //Este es un componente adaptativo que depdneiente del sistema
             //operativo que se esta utilizando.-
             SwitchListTile(
-                title: Text('DarkMode'), value: true, onChanged: (value) {}),
+                title: const Text('DarkMode'),
+                value: isDarkMode,
+                onChanged: (value) {
+                  isDarkMode = value;
+                  //Mando a llamar al setState para redibujar el Widget.
+                  setState(() {});
+                }),
             const Divider(),
 
             RadioListTile<int>(
                 title: const Text('Masculino'),
                 value: 1,
-                groupValue: 1,
-                onChanged: (value) {}),
+                groupValue: gender,
+                onChanged: (value) {
+                  //Aqui pregunto si el value es nulo que le mande un 1
+                  gender = value ?? 1;
+                  setState(() {});
+                }),
             const Divider(),
             RadioListTile<int>(
                 title: const Text('Femenino'),
                 value: 2,
-                groupValue: 1,
-                onChanged: (value) {}),
+                groupValue: gender,
+                onChanged: (value) {
+                  //Aqui pregunto si el value es nulo que le mande un 2
+                  gender = value ?? 2;
+                  setState(() {});
+                }),
             const Divider(),
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
                 initialValue: 'Mauricio Alpizar',
-                decoration: const InputDecoration(
-                  labelText: 'Nombre',
-                  helperText: 'Nombre del Usuario'
-                  
-                  ),
+                decoration: InputDecoration(
+                    labelText: 'Nombre', 
+                    helperText: 'Nombre del Usuario:$name'),
+                onChanged: (value) {
+                  name = value;
+                  setState(() {});
+                },
               ),
             )
           ],
