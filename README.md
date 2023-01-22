@@ -9,9 +9,11 @@ Manejo de Preferencias de usuario.
 Estructura de Llave - Valor, el almacenamiento se realiza en el disco duro del dispositivo o equivalente.
 Reconocimiento de que el App se puede cerrar y los valores resguardados en las preferencias de usuario no se pierden como un tipo de manejo persistente.
 
+Se usa tambien el widget del Drawer como Menu principal de la aplicacion.
+
 ## Paquetes Usados.
 
-- [shared_preferences: ^2.0.17](https://pub.dev/packages/shared_preferences)
+- [shared_preferences: ^2.0.17] (https://pub.dev/packages/shared_preferences)
 - [provider: ^6.0.5] (https://pub.dev/packages/provider)
 
 ## ScreenShots del App
