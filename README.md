@@ -5,14 +5,20 @@ Este proyecto es de repaso del curso de Flutter para el manejo y gestor de prefe
 ## Descripción
 
 Manejo de Preferencias de usuario.
+
 Estructura de Llave - Valor, el almacenamiento se realiza en el disco duro del dispositivo o equivalente.
 Reconocimiento de que el App se puede cerrar y los valores resguardados en las preferencias de usuario no se pierden como un tipo de manejo persistente.
 
-A few resources to get you started if this is your first Flutter project:
+## Paquetes Usados.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [shared_preferences: ^2.0.17](https://pub.dev/packages/shared_preferences)
+- [provider: ^6.0.5] (https://pub.dev/packages/provider)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ScreenShots del App
+
+![Pantalla 1](https://github.com/edwalpca/preferences_app/blob/main/info_proyecto/Preferencias1.png)
+![Pantalla 2](https://github.com/edwalpca/preferences_app/blob/main/info_proyecto/Preferencias2.png)
+![Pantalla 3](https://github.com/edwalpca/preferences_app/blob/main/info_proyecto/Preferencias3.png)
+![Pantalla 4](https://github.com/edwalpca/preferences_app/blob/main/info_proyecto/Preferencias4.png)
+![Pantalla 5](https://github.com/edwalpca/preferences_app/blob/main/info_proyecto/Preferencias5.png)
+![Pantalla 6](https://github.com/edwalpca/preferences_app/blob/main/info_proyecto/Preferencias6.png)
